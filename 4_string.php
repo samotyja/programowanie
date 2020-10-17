@@ -71,10 +71,14 @@ echo wordwrap($lorem, 40, '<hr>');
 //zamiana ciągów
 	$replace = str_replace('korona', 'grypa', 'korona jest niebezpieczna');
 	echo $replace;
+	echo '<br>';
 
 //Ćwiczenie: Usuń z loginu polskie znaki
 
 $login = 'bączek';
-$censure = array('ą', 'ę', 'ł', 'ś', 'ć','ź','ż')
+$censure = array('ą', 'ę', 'ł', 'ś', 'ć','ź','ż','ń','ó');
+$replace = array('a', 'e', 'l', 's', 'c','z','z','n','o');
+echo str_replace($censure,$replace,$login);
+
 
 ?>
