@@ -40,8 +40,7 @@
 
     $name = "Anna";
     echo <<<LABEL
-    
-    <br>Imię:$name
+        <br>Imię:$name
 LABEL;
 
     $imie = "Jakub";
@@ -49,11 +48,11 @@ LABEL;
     $miejscowosc = "Chocicza";
     $urodzenia = "Poznań";
     echo <<<DANE
-    <br><br><hr>
-    <u>Dane użytkownika</u>
-    <br>Imię i Nazwisko: $imie $nazwisko
-    <br>Miejscowość: $miejscowosc
-    <br>Miejsce urodzenia: $urodzenia
-
+        <br><br><hr>
+        <u>Dane użytkownika</u>
+        <br>Imię i Nazwisko: $imie $nazwisko
+        <br>Miejscowość: $miejscowosc
+        <br>Miejsce urodzenia: $urodzenia
 DANE;
-    ?>
+
+?>
