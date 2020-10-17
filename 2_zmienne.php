@@ -53,6 +53,7 @@ echo "<hr>";
     $a=7.5;
     $b=10;
     $wynik=$a<=>$b;
+    
 //Ćwiczenie
 //ify
     if ($wynik==-1){
@@ -62,6 +63,7 @@ echo "<hr>";
     }else{
         echo "Zmienna A i B jest równa";
     }
+
 //switche
     switch ($a <=> $b){
         case $b <=> $a:
