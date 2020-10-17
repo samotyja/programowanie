@@ -47,4 +47,36 @@ echo "<hr>";
             echo '<br>Pochodzisz z innego kraju niż Polska lub Gruzja';
     break;
     }
+
+    echo "<hr>";
+
+    $a=7.5;
+    $b=10;
+    $wynik=$a<=>$b;
+//Ćwiczenie
+//ify
+    if ($wynik==-1){
+        echo "Zmienna B Jest Większa od zmiennej A";
+    }else if($wynik==1){
+        echo "Zmienna A jest większa od zmiennej B";
+    }else{
+        echo "Zmienna A i B jest równa";
+    }
+//switche
+    switch ($a <=> $b){
+        case $b <=> $a:
+            echo '<br><b>Zmienna A jest większa od zmiennej B';
+        break;
+
+        case $a <=> $b:
+            echo '<br><b>Zmienna B jest większa od zmiennej A';
+        break;
+
+        default:
+            echo '<br><b>Zmienna A i B jest równa';
+        break;
+    }
+
+
+
 ?>
