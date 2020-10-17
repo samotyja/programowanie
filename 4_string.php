@@ -64,6 +64,17 @@ echo wordwrap($lorem, 40, '<hr>');
 	$mail = strstr('janusz@gmail.com', 64);
 	echo "$mail<br>";
 
+//substr
+	echo substr('Janusz Kowalski',7, 5);
+	ob_clean();
 
+//zamiana ciągów
+	$replace = str_replace('korona', 'grypa', 'korona jest niebezpieczna');
+	echo $replace;
+
+//Ćwiczenie: Usuń z loginu polskie znaki
+
+$login = 'bączek';
+$censure = array('ą', 'ę', 'ł', 'ś', 'ć','ź','ż')
 
 ?>
