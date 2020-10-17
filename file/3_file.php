@@ -1,7 +1,8 @@
 <?php
+$file = __FILE__;
     echo <<<TEXT
     <hr>
-    Lokalizacja pliku:
+    Lokalizacja pliku: $file;
 
     <hr>
 TEXT;

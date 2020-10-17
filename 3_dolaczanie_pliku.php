@@ -8,7 +8,12 @@
 <body>
     Początek pliku
     <?php
-        include ''
+        include './file/3_file.php';
+        include_once './file/3_file.php';
+        include './file/3_animal.php';
+        echo 'Require:'; //wymagany
+        require './file/3_animal.php';
+        require_once './file/3_animal.php';
     ?>
     Koniec pliku
 </body>
