@@ -79,6 +79,18 @@ echo "<hr>";
         break;
     }
 
+    echo '<hr>';
+    //postinkrementacja $x++ => $x = $x + 1
+    //postdekrementacja $x-- => $x = $x - 1
+    
+    //preinkrementacja ++$x
+    //predekrementacja --$x
+    $x = 10;
+    echo $x++;  //10
+    echo $x;    //11
+    echo ++$x;  //12
+    echo --$x;  //11
+
 
 
 ?>
