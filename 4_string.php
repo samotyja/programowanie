@@ -37,21 +37,32 @@ echo wordwrap($lorem, 40, '<hr>');
 //białe znaki
 	$name = 'Anna';
 	$name1 = '  Anna ';
-	
+
 	//sprawdzanie długości zmiennych
 	echo 'Długość $name: ',strlen($name);
 	echo '<br> Długośc $name1: ',strlen($name1);
 
 	//wyczyśc zmienną $name1 z białych znaków
 	echo '<br>';
-	echo $name1= trim($name1, ' ');
-	echo '<br> Długośc $name1: ',strlen($name1);
+	echo strlen(trim($name1)),'<hr>';
 
+	//przeszukiwanie ciągó znaków
+	$address = 'Poznań, ul.Rynek Jeżycki 1, tel. (61)123-45-67';
+	echo strstr($address, 'tel'),'<br>';
 
+	//odwrotnośc powyższej funkcji
+	$address = 'Poznań, ul.Rynek Jeżycki 1, tel. (61)123-45-67';
+	echo strstr($address, 'tel', true),'<br>';
 
+	//ignoruje rozmiar liter
+	$address = 'Poznań, ul.Rynek Jeżycki 1, tel. (61)123-45-67';
+	echo stristr($address, 'Tel'),'<br>';
 
+	$mail = strstr('janusz@gmail.com', '@');
+	echo "$mail<br>";
 
-
+	$mail = strstr('janusz@gmail.com', 64);
+	echo "$mail<br>";
 
 
 
