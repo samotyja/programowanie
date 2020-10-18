@@ -35,7 +35,7 @@
     
     Ulubiony kolor: $color<hr>
 T;
-    echo "<a href=\"./1_zadanie.php?name=$name&surname=$surname\">Popraw dane w formularzu</a>";
+    echo "<a href=\"./1_zadanie.php?name=$name&surname=$surname&color=$_GET['color'];\">Popraw dane w formularzu</a>";
     }else{
        // header("Location:./1_zadanie.php");
     

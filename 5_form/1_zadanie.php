@@ -8,7 +8,7 @@
 <body>
     <h1>Formularz z danymi użytkowników</h1>
     <meta name="viewport" content="width">
-    <form action="./2_zadanie_dane.php" method="get">
+    <form name="form1" action="./2_zadanie_dane.php" method="get">
     <?php
         if(!empty($_GET['name'])){
             $name=$_GET['name'];
@@ -34,7 +34,35 @@
     <br><br>
     <input type="checkbox" name="statute">Regulamin<br><br>
     <input type="submit" value="Wyślij dane">
+
+    <?php
+        switch ($_GET['color']) {
+            case 'r':
+              ?>    
+    <script>
+        document.form1.elements['r'].checked = true; 
+    </script>
+    <?php
+    break;
+    case 'g':
+        ?>    
+    <script>
+        document.form1.elements['g'].checked = true; 
+    </script>
+        <?php
+    break;
+    case 'b':
+        ?>    
+    <script>
+        document.form1.elements['b'].checked = true; 
+    </script>
+    <?php
+    break;
+
+        }
+        ?>
     
+
 </form>
 </body>
 </html>
