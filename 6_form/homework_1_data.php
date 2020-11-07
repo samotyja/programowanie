@@ -6,7 +6,7 @@ Wynik wyświetl w formacie:
 Pole wynosi: 20cm2 (2 ma byc w indeksie górnym)
 Obwód wynosi: 20cm
 Dane wyślij z formularza bezpiecznie (POST)
-Obliczenia mają być wyidoczne w innym pliku
+Obliczenia mają b1yć wyidoczne w innym pliku
  -->
 
 <?php
@@ -34,7 +34,7 @@ Obliczenia mają być wyidoczne w innym pliku
 
         if ($_POST['bok_A'] <=0 || $_POST['bok_B'] <=0) {
             ?>
-            <script>
+            <script>;
                 //history.back();
             </script>
             <?php
