@@ -10,25 +10,25 @@
 
     <?php
     $error=false;
-    if (!empty($_POST['city']&&!empty($_POST['color']))){
+    if (!empty($_POST['city'])&&!empty($_POST['color'])){
         $city = $_POST['city'];
         switch ($_POST['color']) {
             case 'r':
-                echo "<h1>Dane z formularza</h1>";
-                echo "Miasto: $city<br>";
-                echo "Kolor: Czerwony";
+                $color = "Czerwony";
                 break;
             case 'g':
-                echo "<h1>Dane z formularza</h1>";
-                echo "Miasto: $city<br>";
-                echo "Kolor: Zielony";
+                $color = "Zielony";
                 break;
             
             default:
                 $error=true;
-                break;  
+                break; 
+
+
         }
-        
+            echo "<h1>Dane z formularza</h1><br>";
+            echo "Miasto: $city<br>";
+            echo "Kolor: $color";
     }else{
         $error=true;
     }
