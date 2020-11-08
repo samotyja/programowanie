@@ -6,7 +6,13 @@ Utwórz dwie funkcje (Dodawanie i odejmowanie), które pobierają dane z wyniku 
 Wynik wyświetl z precyzją dwóch miejsc. (funckcja number_format())
 Pole wynik jest nieaktywne, tylko wyświetla wynik.*/
 ?>
+<?php
+    session_start();
+    if (!isset($_SESSION['result'])) {
+        $_SESSION['result'] = 0;
+    }
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,45 +24,56 @@ Pole wynik jest nieaktywne, tylko wyświetla wynik.*/
 
 <body>
 
-    <form method="POST">
+<?php
+    function dodawanie($wynik, $liczba){
+        return $wynik+$liczba;
+    }
+    function odejmowanie($wynik,$liczba){
+        return $wynik-$liczba;
+    }
+
+        ?>
+    <form method="GET">
         <input type="text" name="liczba" placeholder="liczba">
-        <input type="text" name="wynik" placeholder="wynik" disabled>
+        <input type="text" name="wynik" value="<?php echo $_SESSION['result']; ?>" placeholder="wynik" disabled>
         <br>
-        <input type="radio" name="wybor" value="dodawanie1" id="1">
+        <input type="radio" name="dzialanie" value="dodawanie" id="1">
         <label for="1">Dodawanie</label>
-        <input type="radio" name="wybor" value="odejmowanie1" id="2">
+        <input type="radio" name="dzialanie" value="odejmowanie" id="2">
         <label for="2">Odejmowanie</label>
         <br>
-        <input type="submit" value="Prześlij Formularz">
+        <input type="submit" name="button" value="Prześlij Formularz">
     </form>
 
-        <?php
-        $error=false;
-        if(!empty($_POST['liczba'])){
-            switch ($_POST['wybor']) {
-                case 'dodawanie1':
-                    function dodawanie($x, $y = 0){
-                        return $x+$y;
-                    }
-                    dodawanie($_POST['liczba'], );
-                break;
-                case 'odejmowanie1':
-                    function odejmowanie($liczba, $wynik = 0){}
-                break;
-                
-                default:
-                    $error = true;
-                break;
-            }
-        }if($error==true){
-            echo "Uzupełnij liczbę";
+    <?php
+        if (isset($_GET['button'])){
+            if (!empty($_GET['liczba'])&&!empty($_GET['dzialanie'])){
+                $result=0;
+                switch ($_GET['dzialanie']) {
+                    case 'dodawanie':
+                        $_SESSION['result'] = dodawanie($_SESSION['result'], $_GET['liczba']);
+                        break;
+                    case 'odejmowanie':
+                        $_SESSION['result'] = odejmowanie($_SESSION['result'], $_GET['liczba']);
+
+                        break;
+                    default:
+                        echo 'Wypełnij prawidłowo pole działanie';
+                        break;
+                }
+            echo $_SESSION['result'];
+            
+        }else{
+            echo '<hr>Wypełnij wszystkie pola';
         }
+        
+    }
+        
         
 
 
 
 
-        ?>
+    ?>
 </body>
-
 </html>
