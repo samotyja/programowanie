@@ -1,0 +1,8 @@
+table, tr, th, td{
+    border: solid 1px gray;
+    text-align: center;
+    border-collapse: collapse;
+}
+th {
+    background-color: orange;
+}
