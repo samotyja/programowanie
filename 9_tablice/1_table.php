@@ -15,5 +15,5 @@ for ($i=0; $i < count($colors); $i++){
     }else{
         echo $colors[$i],', ';
     }
-    }
+}
 ?>
