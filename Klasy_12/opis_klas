@@ -1,0 +1,12 @@
+obiekt jest pojedynczym egzemplarzem klasy
+
+
+do składowych odwołujemy się za pomocą operatora ->
+
+
+$this - pseudozmienna
+$this reprezentuje obiekt w zasięgu, którego został wywołany. Dzięki temu klasa nie musi znać swojej nazwy, aby jej metody mogły odwoływać się do wewnętrznych zmiennych składowych swojej klasy
+
+konstruktor jest to metoda wywoływana w momencie utworzenia obiektu 
+
+destruktor - działa odwrotnie czyli kiedy wykonuje się obiekt jest usuwany
