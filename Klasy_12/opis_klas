@@ -1,5 +1,11 @@
+Klasa nadrzędn, rodzic
+Klasa podrzędna, potomnna, dziedzicząca, dziecko
+
+
 obiekt jest pojedynczym egzemplarzem klasy
 
+właściwość = składowa
+metoda (funkcja)
 
 do składowych odwołujemy się za pomocą operatora ->
 
@@ -10,3 +16,14 @@ $this reprezentuje obiekt w zasięgu, którego został wywołany. Dzięki temu k
 konstruktor jest to metoda wywoływana w momencie utworzenia obiektu 
 
 destruktor - działa odwrotnie czyli kiedy wykonuje się obiekt jest usuwany
+
+Nie można utworzyć nowej instancji obiektu
+klasy abstrakcyjnej
+
+metoda abstrakcyjna, defniniuje jedynie sygnaturę metody bez jej implementacji
+implementację metody abstrakcyjnej musimy dodać w klasie pochodnej(dziedziczącej)
+jeżeli klasa ma metodę abstrakcyjną to musi być również klasą abstrakcyjną
+
+Interfejsy służą nam do określenia, jakie metody muszą zostać zaimplementowane (inaczej mówiąc stworzone) w klasie. Interfejs może zawierać jedynie deklaracje metod, bez ich ciał. Interfejs deklarujemy podobnie jak klasę, lecz przy użyciu słowa kluczowego interface.
+
+Na kolejnych zajeciach zrobić modyfikatory dostępu

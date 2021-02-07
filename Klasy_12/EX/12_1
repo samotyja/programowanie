@@ -1,7 +1,0 @@
-//Utwórz formularz z danymi: Imię, Nazwisko, wiek, wzrost, miasto, 
-//Po wprowadzeniu danych formularz jest wysyłany do strony
-//data.php utwórz obiekt i przypisz mu wszystkie własciwości
-//i wyświetl na ekranie za pomocą metody.
-
-Metodę dodaj w osobnym katalogu class i pliku o nazwie takiej
-jak klasa, nazwa pliku musi być z dużej litery
